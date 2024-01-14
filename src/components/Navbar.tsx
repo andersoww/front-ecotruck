@@ -6,8 +6,10 @@ import { MenuItem } from "@/components/MenuItem";
 import ReactPopover from "@/components/PopOver";
 import clsx from "clsx";
 import { Menu } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 function NavBar() {
+  const { push } = useRouter();
   return (
     <header className="w-full fixed top-0 z-50 border-b border-[#323539]">
       <div className={clsx("flex justify-center w-full px-4 relative")}>
@@ -25,7 +27,11 @@ function NavBar() {
           </ReactPopover>
 
           <div className="flex max-md:hidden">
-            <Button>Log In</Button>
+            <Button
+              onClick={() => push(process.env.NEXT_PUBLIC_URL_FRONT_OPERATING!)}
+            >
+              Log In
+            </Button>
           </div>
         </div>
       </div>

@@ -95,7 +95,7 @@ export default function Home() {
 
       <Section id="Serviços">
         <div
-          className="flex flex-col gap-16 pt-16"
+          className="flex flex-col gap-16 pt-8 p-4"
           data-aos="fade-down"
           data-aos-duration="1000"
         >
