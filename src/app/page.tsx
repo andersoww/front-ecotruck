@@ -24,7 +24,7 @@ export default function Home() {
       <NavBar />
       <Section className="max-w-full overflow-hidden" id="Início">
         <div className="bg-[url('/repeated-square-dark.webp')] absolute w-full h-full z-10" />
-        <div className="flex flex-col items-center z-30 py-20 px-28 max-w-7xl max-sm:px-16">
+        <div className="flex flex-col items-center z-30 py-20 px-28 max-w-7xl max-sm:px-4">
           <p className="bg-goldPoppy-600 text-sm font-semibold text-center w-fit rounded-full px-2 py-0.5 mb-3.5">
             Monitoramento
           </p>
@@ -41,9 +41,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-center gap-4 mt-9">
-            <Button className="max-sm:[&>button]:text-xs">Get Started</Button>
-            <Button variants="secondary" className="max-sm:[&>button]:text-xs">
+          <div className="flex justify-center gap-4 mt-9 max-sm:flex-col max-sm:w-full">
+            <Button className="max-sm:[&>button]:text-xs [&>button]:w-full">
+              Get Started
+            </Button>
+            <Button
+              variants="secondary"
+              className="max-sm:[&>button]:text-xs [&>button]:w-full"
+            >
               Contact Us
             </Button>
           </div>

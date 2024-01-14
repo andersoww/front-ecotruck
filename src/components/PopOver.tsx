@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/Button";
 import { SmoothScroll } from "@/utils/SmoothScroll";
+import { useRouter } from "next/navigation";
 import {
   PropsWithChildren,
   ReactNode,
@@ -23,6 +24,7 @@ function ReactPopover({
   status,
   handleStatus,
 }: IPopover) {
+  const { push } = useRouter();
   const [show, setShow] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -99,7 +101,10 @@ function ReactPopover({
 
           <div className="flex items-center justify-between px-2 py-1">
             <h1 className="px-2 py-3 text-goldPoppy-600 font-medium">Menu</h1>
-            <Button className="[&>button]:text-xs [&>button]:py-3">
+            <Button
+              className="[&>button]:text-xs [&>button]:py-3"
+              onClick={() => push(process.env.NEXT_PUBLIC_URL_FRONT_OPERATING!)}
+            >
               Log In
             </Button>
           </div>
