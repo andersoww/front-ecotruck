@@ -47,9 +47,10 @@ export default function Home() {
             </Button>
             <Button
               variants="secondary"
-              className="max-sm:[&>button]:text-xs [&>button]:w-full"
+              className="max-sm:[&>button]:text-xs [&>button]:w-full [&>button]:flex [&>button]:items-center [&>button]:gap-2 [&>button]:justify-center"
             >
               Contact Us
+              <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
         </div>
@@ -61,6 +62,7 @@ export default function Home() {
             width={500}
             height={100}
             className="absolute inset-y-0 w-full h-auto object-cover"
+            priority
           />
         </div>
       </Section>

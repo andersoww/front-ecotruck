@@ -1,5 +1,6 @@
+import { ItemFooter } from "@/components/ItemFooter";
 import { LogoImg } from "@/components/LogoImg";
-import { ArrowUp, ChevronRight, Linkedin, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 function Footer() {
   return (
@@ -21,18 +22,7 @@ function Footer() {
           <div className="flex flex-col gap-3">
             <h3 className="font-bold #F9F9F9 text-2xl">Links</h3>
 
-            {["Início", "Sobre nós", "Serviços"].map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="flex items-center gap-1 hover:cursor-pointer"
-                >
-                  <ChevronRight className="w-6 h-6 text-[#979AA0]" />
-
-                  <p className="text-[#979AA0] font-medium">{item}</p>
-                </div>
-              );
-            })}
+            <ItemFooter />
           </div>
 
           <div className="flex flex-col gap-3">
