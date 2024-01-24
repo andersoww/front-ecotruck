@@ -13,6 +13,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Button } from "@/components/Button";
+import Screen from "../../public/screen.png";
+import { CardQuestion } from "@/components/CardQuestion";
 
 export default function Home() {
   useEffect(() => {
@@ -55,14 +57,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="overflow-hidden z-30 h-[280px] relative w-full">
+        <div className="max-w-7xl w-full h-[280px] max-sm:h-[180px] relative z-30 flex justify-center items-center overflow-hidden scale-[1.20]">
           <Image
-            src="/macbook.svg"
-            alt="screen"
-            width={500}
+            src="/mac.png"
+            alt="Mac"
+            width={700}
             height={100}
-            className="absolute inset-y-0 w-full h-auto object-cover"
-            priority
+            className="w-full absolute inset-y-0 max-sm:w-[800px]"
+          />
+          <Image
+            src={Screen}
+            alt="screen"
+            width={800}
+            height={400}
+            className="absolute rounded-lg w-[75%] inset-y-0 mt-8 max-md:mt-4"
+            style={{ objectFit: "fill" }}
           />
         </div>
       </Section>
@@ -100,9 +109,48 @@ export default function Home() {
         </div>
       </Section>
 
+      <Section>
+        <div className="flex flex-col gap-8 px-4 my-32">
+          <div className="flex flex-col items-center gap-6">
+            <h1 className="text-3xl font-bold text-center max-sm:text-3xl max-sm:w-full">
+              Frequently Asked Questions
+            </h1>
+
+            <p className="text-[#979AA0] font-normal text-lg max-w-[680px] w-full text-center max-sm:text-md">
+              Our FAQ area is the best place to look to find answers to your
+              questions. Our community and support team constantly updates the
+              questions and answers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 w-full gap-4 max-sm:grid-cols-1">
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="01"
+            />
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="02"
+            />
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="03"
+            />
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="04"
+            />
+          </div>
+        </div>
+      </Section>
+
       <Section id="Serviços">
         <div
-          className="flex flex-col gap-16 pt-8 p-4"
+          className="flex flex-col gap-16 pt-16 p-4"
           data-aos="fade-down"
           data-aos-duration="1000"
         >
@@ -165,7 +213,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
       <Section>
         <div
           className="flex flex-col items-center gap-16 pt-16 pb-24"
