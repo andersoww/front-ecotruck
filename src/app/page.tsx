@@ -109,7 +109,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section>
+      <Section id="FAQ">
         <div className="flex flex-col gap-8 px-4 my-32">
           <div className="flex flex-col items-center gap-6">
             <h1 className="text-3xl font-bold text-center max-sm:text-3xl max-sm:w-full">

@@ -9,6 +9,7 @@ function SmoothScroll(e: any) {
     Serviços: targetElement?.offsetTop! - 100,
     Contatos: targetElement?.offsetTop! - 100,
     "Sobre nós": targetElement?.offsetTop! - 100,
+    FAQ: targetElement?.offsetTop! - 140,
   };
 
   if (targetElement) {

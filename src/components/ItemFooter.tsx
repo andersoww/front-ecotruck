@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 function ItemFooter() {
   return (
     <>
-      {["Início", "Sobre nós", "Serviços"].map((item, index) => {
+      {["Início", "Sobre nós", "Serviços", "FAQ"].map((item, index) => {
         return (
           <a
             key={index}
