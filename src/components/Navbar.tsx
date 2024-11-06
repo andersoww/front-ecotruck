@@ -28,7 +28,6 @@ function NavBar() {
 
           <div className="flex max-md:hidden">
             <Button
-              onClick={() => push(process.env.NEXT_PUBLIC_URL_FRONT_OPERATING!)}
             >
               Log In
             </Button>
